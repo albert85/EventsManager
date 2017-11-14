@@ -1,0 +1,75 @@
+body{
+    height:  100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* background: #222; */
+}
+
+#siginsection{
+    background-color: rgba(0, 0, 0, 0.8);
+    /* masrgin-top: 5%; */
+    
+    /* width: 500px; */
+   
+}
+
+#sigUpsection{
+    background-color: rgba(0, 0, 0, 0.9);
+    /* masrgin-top: 5%; */
+    
+    /* width: 500px; */
+   margin-top: -110px
+}
+
+#cover-section{
+ background: #222 url('../imag/eventcenter3.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding: 20vh 0;
+}
+
+hr{
+    border-color: #ffffff;
+}
+
+#cover-section-signup{
+  background: #222 url('../imag/eventcenter1.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding: 20vh 0;
+}
+
+img{
+    width: 50%;
+    height: 50%;
+}
+
+.scrollevent{
+    height: 590px;
+    overflow-y: scroll;
+    background: rgba(0, 0, 0, 0.8);
+}
+.eventlisting{
+     background: rgba(0, 0, 0, 0.8);
+}
+
+#user-section{
+    background: url('../imag/eventcenter.jpg') center center no-repeat;
+    background-size: cover;
+    padding: 15vh 0;
+    /* margin-top: -70px */
+}
+
+.addevent{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.card-bg{
+    background: grey;
+}
+a{
+    text-decoration: none;
+}

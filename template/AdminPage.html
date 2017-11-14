@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Event Manager</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/eventStyle.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid p-2 bg-primary text-center text-white">
+        <h6 class="text-right">Admin...</h6>
+        <h3>EVENTS</h3>
+
+    </div>
+
+    <div class="section">
+        <div id="user-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 mb-5 text-white addevent p-3">
+                        <div class="bg-success text-center text-white p-2 mb-4">
+                            <h4>ADD NEW CENTER</h4>
+                        </div>
+                        <form class="p-2">
+                            <div class="form-group">
+                                <label for="eventcentername"> Event Center Name:</label>
+                                <input type="text" id="eventcentername" class="form-control" placeholder="Chelvron Event Hall" aria-describedby="helpId" required>
+                            </div>
+                           
+                                <div class="form-group">
+                                    <label for="eventlocation"> Event Center Location:</label>
+                                    <input type="text" id="eventlocation" class="form-control" placeholder="e.g. 2, Atanda Street, Ikeja, Lagos" aria-describedby="helpId" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="eventcapacity"> Event Center Capacity:</label>
+                                    <input type="number" id="eventlocation" class="form-control" placeholder="e.g. 200000" aria-describedby="helpId" required>
+                                </div>
+
+
+
+                        </form>
+                        <button type="submit" class="btn btn-success btn-lg btn-block mb-3">
+                            <h3>
+                                <i class="fa fa-plus text-white" aria-hidden="true"></i>
+                            </h3>
+                        </button>
+
+                        <!-- Viewing all booking at a particular date -->
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
+                            <h3 class="text-white">
+                                <i class="fa fa-search-plus text-white" aria-hidden="true"></i> SEARCH FOR CENTERS </h3>
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade text-dark" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-primary text-white">
+                                        <h5 class="modal-title " id="exampleModalLabel">Bookings</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body text-dark">
+                                        <!-- create a column to view bookings of a particular date -->
+                                        <div class="row">
+                                            <!-- First Column comprise of the search options -->
+                                            <div class="col-md-12 col-sm-12">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="selecteventcentre">Event Centre</label>
+                                                        <select class="form-control" name="" id="selecteventcentre" required>
+                                                            <option></option>
+                                                            <option>Alojo Event centre</option>
+                                                            <option>Eyitayo Event centre</option>
+                                                            <option>Rhema Event centre</option>
+                                                        </select>
+
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="bookingdates">Choose a booking date</label>
+                                                        <input type="date" id="bookingdates" class="form-control" placeholder="" aria-describedby="helpId">
+
+                                                    </div>
+                                                </form>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="col-md-6 col-sm-12 offset-md-2 eventlisting p-3">
+
+                        <div class="text-center bg-info text-white p-2 mb-4">
+                            <h3>EVENT CENTERS</h3>
+                        </div>
+
+                        <div class="scrollevent text-white p-3" id="eventlist">
+
+                            <div class="card card-bg">
+                                <div class="card-body">
+                                    <h4 class="card-header text-center bg-warning text-white">Chelvron Hall</h4>
+                                </div>
+                                <a href="#">
+                                <div class="card-text">
+                                    <div class="mx-3 display-5">
+                                        
+                                        <div class="form-group row ml-2 text-dark">
+                                            <label for="staticEmail" class="col-sm-4 col-form-label display-5"><strong> Location</strong></label>
+                                            <div class="col-sm-8">
+                                                <label for="staticEmail" id="staticEmail" class="col-form-label">Location</label>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row ml-2 text-dark">
+                                            <label for="staticEmail" class="col-sm-4 col-form-label display-5"><strong> Capacity</strong></label>
+                                            <div class="col-sm-8">
+                                                <label for="staticEmail" id="staticEmail" class="col-form-label">200000</label>
+                                                
+                                            </div>
+                                        </div>
+
+                                        
+
+                                        <div class="row text-center">
+                                            <div class="col-md-6 col-sm-12 mb-2">
+                                                <a href="#" class="btn btn-danger btn-sm w-100">
+                                                    <i class="fa fa-trash" aria-hidden="true"></i> DELETE</a>
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-12 mb-4">
+                                                <a href="#" class="btn btn-info btn-sm w-100"> <i class="fa fa-pencil" aria-hidden="true"></i> EDIT</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </div>
+                            <hr class="hr">
+                            
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</body>
+
+</html>

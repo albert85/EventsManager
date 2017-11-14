@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Event Manager</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/eventStyle.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid p-2 bg-primary text-center text-white">
+        <h6 class="text-right">Welcome users</h6>
+        <h3>EVENTS</h3>
+
+    </div>
+
+    <div class="section">
+        <div id="user-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 mb-5 text-white addevent p-3">
+                            <div class="bg-success text-center text-white p-2 mb-4">
+                                <h4>ADD EVENT</h4>
+                            </div>
+                            <form class="p-2">
+                                <div class="form-group">
+                                    <label for="eventname"> Event Name:</label>
+                                    <input type="text" id="eventname" class="form-control" placeholder="" aria-describedby="helpId" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="location">Location</label>
+                                    <select class="form-control" name="" id="location" required>
+                                        <option></option>
+                                        <option>Alojo Event centre</option>
+                                        <option>Eyitayo Event  centre</option>
+                                        <option>Rhema Event centre</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="eventdate"> Event Date:</label>
+                                    <input type="date" id="eventdate" class="form-control" placeholder="" aria-describedby="helpId" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6"> 
+                                        <div class="form-group">
+                                            <label for="eventdate"> Event Start Time:</label>
+                                            <input type="time" id="eventdate" class="form-control" placeholder="" aria-describedby="helpId" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="eventdate"> Event end Time:</label>
+                                            <input type="time" id="eventdate" class="form-control" placeholder="" aria-describedby="helpId"  required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                            </form>
+                            <button type="submit" class="btn btn-success btn-lg btn-block mb-3">
+                               <h3><i class="fa fa-plus" aria-hidden="true"></i></h3>
+                            </button>
+
+                            <!-- Viewing all booking at a particular date -->
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
+                               <h3><i class="fa fa-address-card-o" aria-hidden="true"></i> VIEW BOOKINGS </h3>
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade text-dark" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-primary text-white">
+                                            <h5 class="modal-title " id="exampleModalLabel">Bookings</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body text-dark">
+                                            <!-- create a column to view bookings of a particular date -->
+                                            <div class="row">
+                                                <!-- First Column comprise of the search options -->
+                                                <div class="col-md-12 col-sm-12">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="selecteventcentre">Event Centre</label>
+                                                            <select class="form-control" name="" id="selecteventcentre" required>
+                                                                <option></option>
+                                                                <option>Alojo Event centre</option>
+                                                                <option>Eyitayo Event centre</option>
+                                                                <option>Rhema Event centre</option>
+                                                            </select>
+                            
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="bookingdates">Choose a booking date</label>
+                                                            <input type="date" id="bookingdates" class="form-control" placeholder="" aria-describedby="helpId">
+                                                        
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                               
+                            
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                    </div>
+                
+                    
+                    <div class="col-md-6 col-sm-12 offset-md-2 eventlisting p-3">
+                        
+                        <div class="text-center bg-info text-white p-2 mb-4">
+                            <h3>EVENTS</h3>
+                        </div>
+
+                        <div class="scrollevent text-white p-3" id="eventlist">
+                            
+                                <div class="card card-bg">
+                                    <div class="card-body">
+                                            <h4 class="card-header text-center bg-warning">Wedding</h4>
+                                    </div>
+                                        <div class="card-text">
+                                           <div class="mx-3 display-5">
+                                               <div class="row">
+                                                   <div class="col-md-12 col-sm-12">
+                                                       <div class="row">
+                                                           <div class="col-md-6 col-sm-6">
+                                                                <h4>
+                                                                    <strong> Location: </strong> </h4>
+                                                           </div>
+
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>Ikeja</h4>
+                                                        </div>
+                                                       </div>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>
+                                                                <strong> Date: </strong>
+                                                            </h4>
+                                                        </div>
+                                                    
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>11/12/2017</h4>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>
+                                                                <strong> Time: </strong>
+                                                            </h4>
+                                                        </div>
+                                                    
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>1.00AM - 2.00PM</h4>
+                                                        </div>
+                                                    </div>
+                                                
+                                               </div>
+                                           
+                                               </div>
+                                            
+                                            
+                                            <div class="row text-center">
+                                                <div class="col-md-6 col-sm-12 mb-2">
+                                                    <a href="#" class="btn btn-danger btn-sm w-100"><i class="fa fa-trash" aria-hidden="true"></i> DELETE</a>
+                                                </div>
+
+                                                <div class="col-md-6 col-sm-12 mb-4">
+                                                        <a href="#" class="btn btn-info btn-sm w-100">EDIT</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="hr">
+                                <div class="card card-bg">
+                                    <div class="card-body">
+                                        <h4 class="card-header text-center bg-warning">Wedding</h4>
+                                    </div>
+                                    <div class="card-text">
+                                        <div class="mx-3 display-5">
+                                            <div class="row">
+                                                <div class="col-md-12 col-sm-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>
+                                                                <strong> Location: </strong>
+                                                            </h4>
+                                                        </div>
+                                
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>Ikeja</h4>
+                                                        </div>
+                                                    </div>
+                                
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>
+                                                                <strong> Date: </strong>
+                                                            </h4>
+                                                        </div>
+                                
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>11/12/2017</h4>
+                                                        </div>
+                                                    </div>
+                                
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>
+                                                                <strong> Time: </strong>
+                                                            </h4>
+                                                        </div>
+                                
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>1.00AM - 2.00PM</h4>
+                                                        </div>
+                                                    </div>
+                                
+                                                </div>
+                                
+                                            </div>
+                                
+                                
+                                            <div class="row text-center">
+                                                <div class="col-md-6 col-sm-12 mb-2">
+                                                    <a href="#" class="btn btn-danger btn-sm w-100">
+                                                        <i class="fa fa-trash" aria-hidden="true"></i> DELETE</a>
+                                                </div>
+                                
+                                                <div class="col-md-6 col-sm-12 mb-4">
+                                                    <a href="#" class="btn btn-info btn-sm w-100">EDIT</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="hr">
+                                <div class="card card-bg">
+                                    <div class="card-body">
+                                        <h4 class="card-header text-center bg-warning">Wedding</h4>
+                                    </div>
+                                    <div class="card-text">
+                                        <div class="mx-3 display-5">
+                                            <div class="row">
+                                                <div class="col-md-12 col-sm-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>
+                                                                <strong> Location: </strong>
+                                                            </h4>
+                                                        </div>
+                                
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>Ikeja</h4>
+                                                        </div>
+                                                    </div>
+                                
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>
+                                                                <strong> Date: </strong>
+                                                            </h4>
+                                                        </div>
+                                
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>11/12/2017</h4>
+                                                        </div>
+                                                    </div>
+                                
+                                                    <div class="row">
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>
+                                                                <strong> Time: </strong>
+                                                            </h4>
+                                                        </div>
+                                
+                                                        <div class="col-md-6 col-sm-6">
+                                                            <h4>1.00AM - 2.00PM</h4>
+                                                        </div>
+                                                    </div>
+                                
+                                                </div>
+                                
+                                            </div>
+                                
+                                
+                                            <div class="row text-center">
+                                                <div class="col-md-6 col-sm-12 mb-2">
+                                                    <a href="#" class="btn btn-danger btn-sm w-100">
+                                                        <i class="fa fa-trash" aria-hidden="true"></i> DELETE</a>
+                                                </div>
+                                
+                                                <div class="col-md-6 col-sm-12 mb-4">
+                                                    <a href="#" class="btn btn-info btn-sm w-100">EDIT</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                                
+                            
+                    </div>
+                            
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</body>
+
+</html>

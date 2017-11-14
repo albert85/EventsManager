@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Event Details</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/eventStyle.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid p-2 bg-primary text-center text-white">
+        <h6 class="text-right">Admin...</h6>
+        <h3>EVENT DETAILS</h3>
+
+    </div>
+
+    <div class="section">
+        <div id="user-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 mb-5 text-white addevent h-50 p-3">
+                        <div class="bg-success text-center text-white p-2 mb-4">
+                            <h4>EVENT CENTER</h4>
+                        </div>
+                        <form class="p-2">
+                            <div class="form-group">
+                                <label for="eventcentername"> Event Center Name:</label>
+                                <input type="text" id="eventcentername" class="form-control" placeholder="Chelvron Event Hall" aria-describedby="helpId"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="eventlocation"> Event Center Location:</label>
+                                <input type="text" id="eventlocation" class="form-control" placeholder="e.g. 2, Atanda Street, Ikeja, Lagos" aria-describedby="helpId"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="eventcapacity"> Event Center Capacity:</label>
+                                <input type="number" id="eventlocation" class="form-control" placeholder="e.g. 200000" aria-describedby="helpId" required>
+                            </div>
+
+
+
+                        </form>
+
+
+
+                    </div>
+
+
+                    <div class="col-md-6 col-sm-12 offset-md-2 eventlisting p-3">
+
+                        <div class="text-center bg-primary text-white p-2 mb-4">
+                            <h3>EVENTS</h3>
+                        </div>
+
+                        <div class="scrollevent text-white p-3" id="eventlist">
+
+                            <div class="card card-bg">
+                                <div class="card-body">
+                                    <h4 class="card-header text-center bg-warning text-white">NAMING CEREMONY</h4>
+                                </div>
+                                <a href="#">
+                                    <div class="card-text">
+                                        <div class="mx-3 display-5">
+
+                                            <div class="form-group row ml-2 text-white">
+                                                <label for="eventdate" class="col-sm-4 col-form-label display-5">
+                                                    <strong> Date</strong>
+                                                </label>
+                                                <div class="col-sm-8">
+                                                    <label id="eventdate" class="col-form-label">11/12/2017</label>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row ml-2 text-white">
+                                                <label for="eventTime" class="col-sm-4 col-form-label display-5">
+                                                    <strong> Time</strong>
+                                                </label>
+                                                <div class="col-sm-8">
+                                                    <label id="eventTime" class="col-form-label">1.00AM -2.00PM</label>
+
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="row text-center">
+                                                <div class="col-md-12 col-sm-12 mb-2">
+                                                    <a href="#" class="btn btn-danger btn-sm w-100">
+                                                        <i class="fa fa-trash" aria-hidden="true"></i> Cancel</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <hr class="hr">
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="scripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</body>
+
+</html>
